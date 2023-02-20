@@ -1,0 +1,8 @@
+from math import log
+class Solution:
+    def isPowerOfThree(self, n: int) -> bool:
+
+        if(n<=0):
+            return False
+        number = math.log10(n) / math.log10(3)
+        return  abs(number - round(number)) < 1e-10
