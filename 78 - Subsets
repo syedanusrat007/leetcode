@@ -1,0 +1,10 @@
+class Solution:
+    def subsets(self, nums: List[int]) -> List[List[int]]:
+
+        sol = [[]]
+        for num in nums:
+            for i in range(len(sol)):
+                temp = list(sol[i])
+                temp.append(num)
+                sol.append(temp)
+        return sol
